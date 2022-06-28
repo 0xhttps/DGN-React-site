@@ -15,7 +15,6 @@ import OpenseaIcon from './OpenseaIcon.png';
 import EtherscanIcon from './EtherscanIcon.png'
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
 
-
 //change to mainnet address upon live deployment
 //import new ABI 
 const contractAddressNum = "0x874894191f832cbA2efD72E40e4f6D11fEc38429";
@@ -43,7 +42,7 @@ const GlobalStyles = createGlobalStyle`
 
 function App() {
   const [currentAccount, setCurrentAccount] = useState(null);
-  
+
   const getWallet = async () => {
     const accounts = await web3.eth.requestAccounts();
     const account = accounts[0]
@@ -124,7 +123,6 @@ useEffect(() => {
       <ThemeProvider theme={original}>
         <Window style={{ width:"100%", height: '100%' , position: 'absolute',top:0, left:0, right: 0, backgroundColor: '#008080'}}>
         <div>
-          <h4 style={{color: 'transparent'}}>bonh smells</h4>
           <div className='wl-only-list' style={{position: 'absolute', right:10, top:'85%'}}>
             <div>DGN is invite only and WL was given to members of DGN.</div>
             <div>Buying DGN tokens on OpenSea currently gives no value.</div>
